@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="clipboard-check-outline.svg" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <title>Check Box</title>
+<script defer src="main.js"></script></head>
+<body>
+  <dialog id="createTodo">
+    <form class="todoForm">
+      <input type="text" name="name" id="todo-name" placeholder="Todo Name" required>
+      <input type="text" name="desc" id="todo-desc" placeholder="Description" required>
+      <div class="todoOptions">
+        <label for="dueDate">Due Date:</label>
+        <input type="date" id="dueDate" required/>
+        <select name="priority" id="priority-select" required>
+          <option value="">--Priority--</option>
+          <option value="Low Priority">Low</option>
+          <option value="Medium Priority">Medium</option>
+          <option value="Urgent">Urgent</option>
+        </select>
+        <select name="project" id="project-select" required>
+          <option value="">--Project--</option>
+        </select>
+      </div>
+      <div class="todoBtns">
+        <button type="button" id="todoCancel">Cancel</button>
+        <button type="submit" id="todoAddBtn"></button>
+      </div>
+    </form>
+  </dialog>
+  <dialog id="createProject">
+    <form class="projectForm">
+      <div class="title">
+        <input type="text" name="project-name" id="project-name" placeholder="Project Title" required>
+      </div>
+      <div class="projectFormBtns">
+        <button type="button" id="projectCancel">Cancel</button>
+        <button type="submit" id="projectAddBtn"></button>
+      </div>
+    </form>
+  </dialog>
+  <div class="container">
+    <div class="sideBar">
+      <div class="branding">
+        <img src="clipboard-check-outline.svg" alt="clipboard">
+        <h2 class="name">Check Box</h2>
+      </div>
+      <div class="taskNav">
+        <button type="button" id="add-todo">
+          <img src="plus-circle.svg" alt="add todo">
+          Add Todo
+        </button>
+      </div>
+      <div class="projects">
+        <div class="projectHead">
+          <p>My Projects</p>
+          <div class="projectBtns">
+            <button type="button" id="addProjectBtn"><img src="plus.svg" alt="add project"></button>
+            <button type="button" id="dropdownBtn"><img src="menu-down.svg" id="up-down" alt="dropdown"></button>
+          </div>
+        </div>
+        <div class="projectList">
+        </div>
+      </div>
+    </div>
+    <div class="article">
+      <div class="project-tasks">
+      </div>
+    </div>
+  </div>
+</body>
+</html>
